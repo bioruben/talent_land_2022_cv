@@ -53,6 +53,7 @@ if __name__ == '__main__':
    
   # Start the video stream
   # 0 is default camera, change value for different input camera
+  cv2.namedWindow("frame", cv2.WINDOW_NORMAL)
   cap = cv2.VideoCapture(0) 
    
   while(True):
