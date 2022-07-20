@@ -25,26 +25,12 @@ Las versiones de las dependencias utilizadas cuando se realizaron estos demos so
 
 	Permite detecta los marcadores y que tiene un flag para detectar los pokemones.
 
-- matching_video.py
-
-	Ejemplo que muestra el matching de descriptores.
-
-- trainning_cnn.py
-
-	Código de una CNN básica para entrenarla desde cero usando Keras.
-
-- test_cnn.py
-
-	Código que prueba la CNN entrenada en el paso anterior.
-
-La útlima actualización se hizo el 10/07/2022, se actualizó el README.
-
 ## Usage
 
 Todos los códigos tienen un menú de help para poderlo correr, ejemplo:
 
-```python3 test_cnn.py -h```
+```python3 detect_aruco.py -h```
 
-Si se desea probar la CNN después de haber bajado los pesos del modelo o haberlo entrenado cada usuario.
+Si se desea activar el flag para desplegar a los pokémon.
 
-```python3 test_cnn.py -i /path/to/the/image/folder```
+```python3 detect_aruco.py -p True```
