@@ -33,11 +33,11 @@ if __name__ == '__main__':
   parser = argparse.ArgumentParser(description='Detect ArUco Marker')
 
   ### Positional arguments
-  parser.add_argument('-p', '--pokemon_flag', default=False, help="Flag to draw traditional location of ArUco Markers or pokemons")
+  parser.add_argument('-p', '--image_flag', default=False, help="Flag to draw traditional location of ArUco Markers")
 
   args = vars(parser.parse_args())
 
-  pokemon_flag  = (args["pokemon_flag"])
+  image_flag  = (args["image_flag"])
 
   # Check if ArUco marker exist.
   if ARUCO_DICT.get(desired_aruco_dictionary, None) is None:
@@ -54,7 +54,7 @@ if __name__ == '__main__':
   # Start the video stream
   # 0 is default camera, change value for different input camera
   cv2.namedWindow("frame", cv2.WINDOW_NORMAL)
-  cap = cv2.VideoCapture("rtsp://ip_adress:8080/h264_ulaw.sdp") 
+  cap = cv2.VideoCapture("rtsp://ip_adress:8080/h264_ulaw.sdp")
 
   while(True):
   
@@ -88,7 +88,7 @@ if __name__ == '__main__':
         center_y = int((top_left[1] + bottom_right[1]) / 2.0)
         
         # Draw pokemons over frame, else just draw bounding box for ArUco Markers
-        if pokemon_flag:          
+        if image_flag:
           width = abs(top_left[0] - bottom_right[0])
           height = abs(top_left[1] - bottom_right[1])
           dim = (width, height)
